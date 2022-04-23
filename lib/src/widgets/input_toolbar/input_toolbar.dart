@@ -36,11 +36,11 @@ class _InputToolbarState extends State<InputToolbar> {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Container(
-        padding: widget.inputOptions.inputToolbarPadding,
-        margin: widget.inputOptions.inputToolbarMargin,
-        decoration: widget.inputOptions.inputToolbarStyle,
+    return Container(
+      padding: widget.inputOptions.inputToolbarPadding,
+      margin: widget.inputOptions.inputToolbarMargin,
+      decoration: widget.inputOptions.inputToolbarStyle,
+      child: SafeArea(
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           crossAxisAlignment: CrossAxisAlignment.center,
@@ -50,32 +50,35 @@ class _InputToolbarState extends State<InputToolbar> {
             Expanded(
               child: Directionality(
                 textDirection: widget.inputOptions.inputTextDirection,
-                child: TextField(
-                  focusNode: widget.inputOptions.focusNode,
-                  controller: textController,
-                  enabled: !widget.inputOptions.inputDisabled,
-                  textCapitalization: widget.inputOptions.textCapitalization,
-                  textInputAction: widget.inputOptions.textInputAction,
-                  decoration: widget.inputOptions.inputDecoration ??
-                      defaultInputDecoration(),
-                  maxLength: widget.inputOptions.maxInputLength,
-                  minLines: 1,
-                  maxLines: widget.inputOptions.inputMaxLines,
-                  cursorColor: widget.inputOptions.cursorStyle.color,
-                  cursorWidth: widget.inputOptions.cursorStyle.width,
-                  showCursor: !widget.inputOptions.cursorStyle.hide,
-                  style: widget.inputOptions.inputTextStyle,
-                  onSubmitted: (String value) {
-                    if (widget.inputOptions.sendOnEnter) {
-                      _sendMessage();
-                    }
-                  },
-                  onChanged: (String value) {
-                    setState(() {});
-                    if (widget.inputOptions.onTextChange != null) {
-                      widget.inputOptions.onTextChange!(value);
-                    }
-                  },
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(vertical: 8.0),
+                  child: TextField(
+                    focusNode: widget.inputOptions.focusNode,
+                    controller: textController,
+                    enabled: !widget.inputOptions.inputDisabled,
+                    textCapitalization: widget.inputOptions.textCapitalization,
+                    textInputAction: widget.inputOptions.textInputAction,
+                    decoration: widget.inputOptions.inputDecoration ??
+                        defaultInputDecoration(),
+                    maxLength: widget.inputOptions.maxInputLength,
+                    minLines: 1,
+                    maxLines: widget.inputOptions.inputMaxLines,
+                    cursorColor: widget.inputOptions.cursorStyle.color,
+                    cursorWidth: widget.inputOptions.cursorStyle.width,
+                    showCursor: !widget.inputOptions.cursorStyle.hide,
+                    style: widget.inputOptions.inputTextStyle,
+                    onSubmitted: (String value) {
+                      if (widget.inputOptions.sendOnEnter) {
+                        _sendMessage();
+                      }
+                    },
+                    onChanged: (String value) {
+                      setState(() {});
+                      if (widget.inputOptions.onTextChange != null) {
+                        widget.inputOptions.onTextChange!(value);
+                      }
+                    },
+                  ),
                 ),
               ),
             ),

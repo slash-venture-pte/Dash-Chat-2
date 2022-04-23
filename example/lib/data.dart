@@ -21,12 +21,12 @@ List<ChatMessage> allUsersSample = <ChatMessage>[
   ChatMessage(
     text: 'Test',
     user: user1,
-    createdAt: DateTime(2021, 01, 30, 16, 45),
+    createdAt: DateTime(2021, 01, 28, 16, 45),
   ),
   ChatMessage(
     text: 'Test',
     user: user2,
-    createdAt: DateTime(2021, 01, 30, 16, 45),
+    createdAt: DateTime(2021, 01, 29, 16, 45),
   ),
   ChatMessage(
     text: 'Test',
@@ -36,65 +36,103 @@ List<ChatMessage> allUsersSample = <ChatMessage>[
   ChatMessage(
     text: 'Test',
     user: user4,
-    createdAt: DateTime(2021, 01, 30, 16, 45),
+    createdAt: DateTime(2021, 02, 01, 16, 45),
   ),
   ChatMessage(
     text: 'Test',
     user: user5,
-    createdAt: DateTime(2021, 01, 30, 16, 45),
+    createdAt: DateTime(2021, 02, 15, 16, 45),
   ),
   ChatMessage(
     text: 'Test',
     user: user6,
-    createdAt: DateTime(2021, 01, 30, 16, 45),
+    createdAt: DateTime(2021, 02, 16, 16, 45),
   ),
   ChatMessage(
     text: 'Test',
     user: user7,
-    createdAt: DateTime(2021, 01, 30, 16, 45),
+    createdAt: DateTime(2021, 02, 18, 16, 45),
   ),
   ChatMessage(
     text: 'Test',
     user: user8,
-    createdAt: DateTime(2021, 01, 30, 16, 45),
+    createdAt: DateTime(2021, 02, 28, 16, 45),
   ),
 ];
 
 List<ChatMessage> basicSample = <ChatMessage>[
   ChatMessage(
-    text: 'google.com',
+    medias: <ChatMedia>[
+      ChatMedia(
+        url:
+            'https://firebasestorage.googleapis.com/v0/b/molteo-40978.appspot.com/o/memes%2F155512641_3864499247004975_4028017188079714246_n.jpg?alt=media&token=0b335455-93ed-4529-9055-9a2c741e0189',
+        type: MediaType.image,
+        fileName: 'image.png',
+        isUploading: true,
+      ),
+      ChatMedia(
+        url:
+            'https://firebasestorage.googleapis.com/v0/b/molteo-40978.appspot.com/o/memes%2F155512641_3864499247004975_4028017188079714246_n.jpg?alt=media&token=0b335455-93ed-4529-9055-9a2c741e0189',
+        type: MediaType.image,
+        fileName: 'image.png',
+      ),
+      ChatMedia(
+        url:
+            'https://firebasestorage.googleapis.com/v0/b/molteo-40978.appspot.com/o/chat_medias%2F2GFlPkj94hKCqonpEdf1%2F20210526_162318.mp4?alt=media&token=01b814b9-d93a-4bf1-8be1-cf9a49058f97',
+        type: MediaType.video,
+        fileName: 'video.mp4',
+        isUploading: false,
+      ),
+      ChatMedia(
+        url:
+            'https://firebasestorage.googleapis.com/v0/b/molteo-40978.appspot.com/o/memes%2F155512641_3864499247004975_4028017188079714246_n.jpg?alt=media&token=0b335455-93ed-4529-9055-9a2c741e0189',
+        type: MediaType.file,
+        fileName: 'image.png',
+      ),
+      ChatMedia(
+        url:
+            'https://firebasestorage.googleapis.com/v0/b/molteo-40978.appspot.com/o/memes%2F155512641_3864499247004975_4028017188079714246_n.jpg?alt=media&token=0b335455-93ed-4529-9055-9a2c741e0189',
+        type: MediaType.image,
+        fileName: 'image.png',
+      )
+    ],
     user: user2,
-    createdAt: DateTime(2021, 01, 31, 16, 45),
+    createdAt: DateTime(2021, 01, 01, 16, 34),
   ),
   ChatMessage(
     text: 'google.com',
     user: user2,
-    createdAt: DateTime(2021, 01, 30, 16, 45),
+    createdAt: DateTime(2021, 01, 01, 16, 45),
+  ),
+  ChatMessage(
+    text: 'google.com',
+    user: user2,
+    createdAt: DateTime(2021, 01, 04, 16, 45),
   ),
   ChatMessage(
     text: "Oh what's up guys?",
     user: user2,
-    createdAt: DateTime(2021, 01, 30, 16, 45),
+    createdAt: DateTime(2021, 01, 07, 16, 45),
   ),
   ChatMessage(
     text: 'How you doin?',
     user: user8,
-    createdAt: DateTime(2021, 01, 30, 16, 34),
+    createdAt: DateTime(2021, 01, 10, 16, 34),
   ),
   ChatMessage(
     text: 'Hey!',
     user: user,
-    createdAt: DateTime(2021, 01, 30, 15, 50),
-  ),
-  ChatMessage(
-    text: 'Hey!',
-    user: user,
-    createdAt: DateTime(2021, 01, 28, 15, 50),
+    createdAt: DateTime(2021, 01, 14, 15, 50),
   ),
   ChatMessage(
     text: 'Hey!',
     user: user,
     createdAt: DateTime(2021, 01, 28, 15, 50),
+  ),
+  ChatMessage(
+    text: 'Hey!',
+    user: user,
+    createdAt: DateTime(2021, 01, 28, 20, 50),
   ),
 ];
 

@@ -5,7 +5,7 @@ class DefaultDateSeparator extends StatelessWidget {
   const DefaultDateSeparator({
     required this.date,
     this.messageListOptions = const MessageListOptions(),
-    this.padding = const EdgeInsets.symmetric(vertical: 20),
+    this.padding = const EdgeInsets.symmetric(vertical: 5, horizontal: 10),
     this.textStyle = const TextStyle(color: Colors.grey),
     Key? key,
   }) : super(key: key);
@@ -24,8 +24,13 @@ class DefaultDateSeparator extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
+    return Container(
+      margin: const EdgeInsets.only(top: 10),
       padding: padding,
+      decoration: BoxDecoration(
+        color: Colors.grey[100],
+        borderRadius: const BorderRadius.all(Radius.circular(20)),
+      ),
       child: Text(
         _formatDateSeparator(date),
         style: textStyle,

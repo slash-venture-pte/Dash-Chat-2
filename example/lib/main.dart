@@ -1,5 +1,6 @@
 import 'package:examples/samples/avatar.dart';
 import 'package:examples/samples/basic.dart';
+import 'package:examples/samples/channel.dart';
 import 'package:examples/samples/media.dart';
 import 'package:examples/samples/quick_replies_sample.dart';
 import 'package:examples/samples/typing_users_sample.dart';
@@ -39,6 +40,10 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            ElevatedButton(
+              onPressed: () => push(ChannelScreen()),
+              child: const Text('Channel'),
+            ),
             ElevatedButton(
               onPressed: () => push(Basic()),
               child: const Text('Basic'),
