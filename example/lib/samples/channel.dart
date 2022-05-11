@@ -44,8 +44,7 @@ class _ChannelScreenState extends State<ChannelScreen> {
           inputToolbarMargin: const EdgeInsets.all(0),
           inputToolbarPadding: const EdgeInsets.all(0),
           onMention: (String name) {
-            print("Mention to $name");
-
+            // print("Mention to $name");
             return user2;
           },
           // textInputAction: TextInputAction.done,
@@ -67,7 +66,7 @@ class _ChannelScreenState extends State<ChannelScreen> {
           //     icon: Icon(Icons.mic),
           //   ),
           // ],
-          inputToolbarStyle: BoxDecoration(color: Colors.white),
+          inputToolbarStyle: const BoxDecoration(color: Colors.white),
           // inputDecoration: const InputDecoration(
           //   border: InputBorder.none,
           //   contentPadding: EdgeInsets.all(

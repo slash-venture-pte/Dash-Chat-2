@@ -62,6 +62,7 @@ class _MessageListState extends State<MessageList> {
             children: <Widget>[
               Expanded(
                 child: ListView.builder(
+                  padding: const EdgeInsets.only(bottom: 8.0),
                   controller: scrollController,
                   reverse: true,
                   itemCount: widget.messages.length,
@@ -97,16 +98,16 @@ class _MessageListState extends State<MessageList> {
                           : const SizedBox(),
                       content: Column(
                         children: <Widget>[
-                          // if (isAfterDateSeparator)
-                          //   widget.messageListOptions.dateSeparatorBuilder !=
-                          //           null
-                          //       ? widget.messageListOptions
-                          //           .dateSeparatorBuilder!(message.createdAt)
-                          //       : DefaultDateSeparator(
-                          //           date: message.createdAt,
-                          //           messageListOptions:
-                          //               widget.messageListOptions,
-                          //         ),
+                          if (isAfterDateSeparator)
+                            widget.messageListOptions.dateSeparatorBuilder !=
+                                    null
+                                ? widget.messageListOptions
+                                    .dateSeparatorBuilder!(message.createdAt)
+                                : DefaultDateSeparator(
+                                    date: message.createdAt,
+                                    messageListOptions:
+                                        widget.messageListOptions,
+                                  ),
                           if (widget.messageOptions.messageRowBuilder !=
                               null) ...<Widget>[
                             widget.messageOptions.messageRowBuilder!(
