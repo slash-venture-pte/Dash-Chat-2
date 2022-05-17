@@ -8,12 +8,12 @@ environment:
   flutter: ">=1.17.0"
 
 dependencies:
-  cached_network_image: ^3.2.0
+  cached_network_image: ^3.2.1
   flutter:
     sdk: flutter
   flutter_parsed_text: ^2.2.1
   intl: ^0.17.0
-  sticky_headers: ^0.2.0
+  sticky_headers: ^0.3.0+2
   url_launcher: ^6.0.10
   video_player: ^2.2.5
 
@@ -27,7 +27,6 @@ dev_dependencies:
 
 # The following section is specific to Flutter.
 flutter:
-
   # To add assets to your package, add an assets section, like this:
   assets:
     - assets/profile_placeholder.png
