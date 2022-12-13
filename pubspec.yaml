@@ -1,6 +1,6 @@
 name: dash_chat_2
 description: The most complete Chat UI for flutter. Easy to use, highly customizable and fully featured
-version: 0.0.4
+version: 0.0.15
 homepage: https://github.com/molteo-engineering-team/Dash-Chat-2
 
 environment:
@@ -29,7 +29,7 @@ dev_dependencies:
 flutter:
   # To add assets to your package, add an assets section, like this:
   assets:
-    - assets/profile_placeholder.png
+    - assets/
   #
   # For details regarding assets in packages, see
   # https://flutter.dev/assets-and-images/#from-packages

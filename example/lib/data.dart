@@ -1,7 +1,7 @@
 import 'package:dash_chat_2/dash_chat_2.dart';
 
 String profileImage =
-    'https://cdn.fastly.picmonkey.com/contentful/h6goo9gw1hh6/2sNZtFAWOdP1lmQ33VwRN3/24e953b920a9cd0ff2e1d587742a2472/1-intro-photo-final.jpg?w=800&q=70';
+    'https://firebasestorage.googleapis.com/v0/b/molteo-40978.appspot.com/o/1-intro-photo-final.jpeg?alt=media&token=daf78997-d8f0-49d1-9120-a9380bde48b5';
 
 // We have all the possibilities for users
 ChatUser user = ChatUser(id: '0');
@@ -62,42 +62,13 @@ List<ChatMessage> allUsersSample = <ChatMessage>[
 
 List<ChatMessage> basicSample = <ChatMessage>[
   ChatMessage(
-    medias: <ChatMedia>[
-      ChatMedia(
-        url:
-            'https://firebasestorage.googleapis.com/v0/b/molteo-40978.appspot.com/o/memes%2F155512641_3864499247004975_4028017188079714246_n.jpg?alt=media&token=0b335455-93ed-4529-9055-9a2c741e0189',
-        type: MediaType.image,
-        fileName: 'image.png',
-        isUploading: true,
-      ),
-      ChatMedia(
-        url:
-            'https://firebasestorage.googleapis.com/v0/b/molteo-40978.appspot.com/o/memes%2F155512641_3864499247004975_4028017188079714246_n.jpg?alt=media&token=0b335455-93ed-4529-9055-9a2c741e0189',
-        type: MediaType.image,
-        fileName: 'image.png',
-      ),
-      ChatMedia(
-        url:
-            'https://firebasestorage.googleapis.com/v0/b/molteo-40978.appspot.com/o/chat_medias%2F2GFlPkj94hKCqonpEdf1%2F20210526_162318.mp4?alt=media&token=01b814b9-d93a-4bf1-8be1-cf9a49058f97',
-        type: MediaType.video,
-        fileName: 'video.mp4',
-        isUploading: false,
-      ),
-      ChatMedia(
-        url:
-            'https://firebasestorage.googleapis.com/v0/b/molteo-40978.appspot.com/o/memes%2F155512641_3864499247004975_4028017188079714246_n.jpg?alt=media&token=0b335455-93ed-4529-9055-9a2c741e0189',
-        type: MediaType.file,
-        fileName: 'image.png',
-      ),
-      ChatMedia(
-        url:
-            'https://firebasestorage.googleapis.com/v0/b/molteo-40978.appspot.com/o/memes%2F155512641_3864499247004975_4028017188079714246_n.jpg?alt=media&token=0b335455-93ed-4529-9055-9a2c741e0189',
-        type: MediaType.image,
-        fileName: 'image.png',
-      )
-    ],
+    text: 'google.com hello you @Marc is it &you okay?',
     user: user2,
-    createdAt: DateTime(2021, 01, 01, 16, 34),
+    createdAt: DateTime(2021, 01, 31, 16, 45),
+    mentions: [
+      Mention(title: '@Marc'),
+      Mention(title: '&you'),
+    ],
   ),
   ChatMessage(
     text: 'google.com',
@@ -186,6 +157,23 @@ List<ChatMessage> quickReplies = <ChatMessage>[
       QuickReply(title: 'Great!'),
       QuickReply(title: 'Awesome'),
     ],
+  ),
+];
+
+List<ChatMessage> mentionSample = <ChatMessage>[
+  ChatMessage(
+    text: 'Hello @Niki, you should check #channel',
+    user: user2,
+    createdAt: DateTime(2021, 01, 31, 16, 45),
+    mentions: [
+      Mention(title: '@Niki', customProperties: {'userId': user5.id}),
+      Mention(title: '#channel'),
+    ],
+  ),
+  ChatMessage(
+    text: "Oh what's up guys?",
+    user: user5,
+    createdAt: DateTime(2021, 01, 30, 16, 45),
   ),
 ];
 

@@ -63,6 +63,7 @@ class _MessageListState extends State<MessageList> {
               Expanded(
                 child: ListView.builder(
                   padding: const EdgeInsets.only(bottom: 8.0),
+                  physics: widget.messageListOptions.scrollPhysics,
                   controller: scrollController,
                   reverse: true,
                   itemCount: widget.messages.length,

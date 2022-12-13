@@ -18,6 +18,11 @@
   </a>
 </p>
 
+<p align="center">
+  <img src="https://firebasestorage.googleapis.com/v0/b/molteo-40978.appspot.com/o/Screenshot1.png?alt=media&token=b77546dc-8fea-4aab-ac1b-3de5a2a90654" width="200"/>
+  <img src="https://firebasestorage.googleapis.com/v0/b/molteo-40978.appspot.com/o/Screenshot2.png?alt=media&token=2bf2ac8e-cb6e-44e7-876d-8c6a7959819e" width="200"/>
+</p>
+
 <h1></h1>
 
 ## Features
@@ -29,10 +34,10 @@
 - Quick Reply messages
 - Load earlier messages
 - Scroll to bottom Widget
-- Multiple media support
-- @ Mention users - WIP
-- Reply to messages - WIP
+- Multiple media support (Audio support: WIP)
+- @ Mention users (or anything else)
 - Typing users
+- Reply to messages - WIP
 - Message status - WIP
 
 You need another feature? you can use the `customProperties` field of the models, it allows you to pass other data to the library that you can then use inside custom builders to implement any feature you need. 
@@ -127,9 +132,15 @@ If you have any suggestions for including a feature or if something doesn't work
 <!-- prettier-ignore-start -->
 <!-- markdownlint-disable -->
 <table>
-  <tr>
-    <td align="center"><a href="https://github.com/SebastienBtr"><img src="https://avatars.githubusercontent.com/u/18089010?v=4?s=100" width="100px;" alt=""/><br /><sub><b>SebastienBtr</b></sub></a><br /><a href="https://github.com/molteo-engineering-team/Dash-Chat-2/commits?author=SebastienBtr" title="Code">💻</a> <a href="#design-SebastienBtr" title="Design">🎨</a></td>
-  </tr>
+  <tbody>
+    <tr>
+      <td align="center"><a href="https://github.com/SebastienBtr"><img src="https://avatars.githubusercontent.com/u/18089010?v=4?s=100" width="100px;" alt="SebastienBtr"/><br /><sub><b>SebastienBtr</b></sub></a><br /><a href="https://github.com/molteo-engineering-team/Dash-Chat-2/commits?author=SebastienBtr" title="Code">💻</a> <a href="#design-SebastienBtr" title="Design">🎨</a></td>
+      <td align="center"><a href="https://github.com/chuusungmin"><img src="https://avatars.githubusercontent.com/u/17997403?v=4?s=100" width="100px;" alt="chuusungmin"/><br /><sub><b>chuusungmin</b></sub></a><br /><a href="https://github.com/molteo-engineering-team/Dash-Chat-2/commits?author=chuusungmin" title="Code">💻</a></td>
+      <td align="center"><a href="https://github.com/fufesou"><img src="https://avatars.githubusercontent.com/u/13586388?v=4?s=100" width="100px;" alt="fufesou"/><br /><sub><b>fufesou</b></sub></a><br /><a href="https://github.com/molteo-engineering-team/Dash-Chat-2/commits?author=fufesou" title="Code">💻</a></td>
+      <td align="center"><a href="https://github.com/farmery"><img src="https://avatars.githubusercontent.com/u/56759256?v=4?s=100" width="100px;" alt="Nwachi ifeanyichukwu Victor"/><br /><sub><b>Nwachi ifeanyichukwu Victor</b></sub></a><br /><a href="https://github.com/molteo-engineering-team/Dash-Chat-2/commits?author=farmery" title="Code">💻</a></td>
+      <td align="center"><a href="http://games.kaedeee.com"><img src="https://avatars.githubusercontent.com/u/55743370?v=4?s=100" width="100px;" alt="Kaede Games"/><br /><sub><b>Kaede Games</b></sub></a><br /><a href="https://github.com/molteo-engineering-team/Dash-Chat-2/commits?author=kaedeee" title="Code">💻</a></td>
+    </tr>
+  </tbody>
 </table>
 
 <!-- markdownlint-restore -->

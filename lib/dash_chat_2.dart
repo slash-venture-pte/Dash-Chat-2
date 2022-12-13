@@ -1,9 +1,8 @@
 library dash_chat_2;
 
-import 'dart:io';
 import 'dart:math';
 
-import 'package:cached_network_image/cached_network_image.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_parsed_text/flutter_parsed_text.dart';
 import 'package:intl/intl.dart' as intl;
@@ -11,12 +10,17 @@ import 'package:sticky_headers/sticky_headers.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:video_player/video_player.dart' as vp;
 
+import 'src/widgets/image_provider/image_provider.dart';
+
+export 'package:flutter_parsed_text/flutter_parsed_text.dart';
+
 part 'src/dash_chat.dart';
 part 'src/models/chat_media.dart';
 part 'src/models/chat_message.dart';
 part 'src/models/chat_user.dart';
 part 'src/models/cursor_style.dart';
 part 'src/models/input_options.dart';
+part 'src/models/mention.dart';
 part 'src/models/message_list_options.dart';
 part 'src/models/message_options.dart';
 part 'src/models/quick_reply.dart';

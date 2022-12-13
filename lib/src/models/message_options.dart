@@ -12,11 +12,13 @@ class MessageOptions {
     this.onLongPressAvatar,
     this.onLongPressMessage,
     this.onPressMessage,
+    this.onPressMention,
     this.currentUserContainerColor,
     this.currentUserTextColor,
     this.containerColor,
     this.textColor,
     this.messagePadding,
+    this.maxWidth,
     this.messageDecorationBuilder,
     this.top,
     this.bottom,
@@ -70,6 +72,9 @@ class MessageOptions {
   /// Function to call when the user press on a message
   final Function(ChatMessage)? onPressMessage;
 
+  /// Function to call when the user press on a message mention
+  final Function(Mention)? onPressMention;
+
   /// Color of the current user chat bubbles
   /// Default to primary color
   final Color? currentUserContainerColor;
@@ -116,6 +121,10 @@ class MessageOptions {
   /// Padding arround the message
   /// Default to: EdgeInsets.all(11)
   final EdgeInsets? messagePadding;
+
+  /// Max message width
+  /// Default to: null, MediaQuery.of(context).size.width * 0.7
+  final double? maxWidth;
 
   /// When a message have both an text and a list of media
   /// it will determine which one th show first
