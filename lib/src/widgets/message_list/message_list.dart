@@ -83,32 +83,33 @@ class _MessageListState extends State<MessageList> {
                           message, nextMessage, widget.messageListOptions);
                     }
                     return StickyHeader(
-                      header: isAfterDateSeparator
-                          ? Center(
-                              child: widget.messageListOptions
-                                          .dateSeparatorBuilder !=
-                                      null
-                                  ? widget.messageListOptions
-                                      .dateSeparatorBuilder!(message.createdAt)
-                                  : DefaultDateSeparator(
-                                      date: message.createdAt,
-                                      messageListOptions:
-                                          widget.messageListOptions,
-                                    ),
-                            )
-                          : const SizedBox(),
+                      // header: isAfterDateSeparator
+                      //     ? Center(
+                      //         child: widget.messageListOptions
+                      //                     .dateSeparatorBuilder !=
+                      //                 null
+                      //             ? widget.messageListOptions
+                      //                 .dateSeparatorBuilder!(message.createdAt)
+                      //             : DefaultDateSeparator(
+                      //                 date: message.createdAt,
+                      //                 messageListOptions:
+                      //                     widget.messageListOptions,
+                      //               ),
+                      //       )
+                      //     : const SizedBox(),
+                      header: const SizedBox(),
                       content: Column(
                         children: <Widget>[
-                          // if (isAfterDateSeparator)
-                          //   widget.messageListOptions.dateSeparatorBuilder !=
-                          //           null
-                          //       ? widget.messageListOptions
-                          //           .dateSeparatorBuilder!(message.createdAt)
-                          //       : DefaultDateSeparator(
-                          //           date: message.createdAt,
-                          //           messageListOptions:
-                          //               widget.messageListOptions,
-                          //         ),
+                          if (isAfterDateSeparator)
+                            widget.messageListOptions.dateSeparatorBuilder !=
+                                    null
+                                ? widget.messageListOptions
+                                    .dateSeparatorBuilder!(message.createdAt)
+                                : DefaultDateSeparator(
+                                    date: message.createdAt,
+                                    messageListOptions:
+                                        widget.messageListOptions,
+                                  ),
                           if (widget.messageOptions.messageRowBuilder !=
                               null) ...<Widget>[
                             widget.messageOptions.messageRowBuilder!(

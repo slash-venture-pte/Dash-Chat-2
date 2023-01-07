@@ -13,6 +13,7 @@ class DashChat extends StatelessWidget {
     this.scrollToBottomOptions = const ScrollToBottomOptions(),
     this.readOnly = false,
     this.typingUsers,
+    this.emptyState,
     Key? key,
   }) : super(key: key);
 
@@ -46,19 +47,29 @@ class DashChat extends StatelessWidget {
   /// List of users currently typing in the chat
   final List<ChatUser>? typingUsers;
 
+  /// Empty stage
+  final Widget? emptyState;
+
   @override
   Widget build(BuildContext context) {
     return Column(
       children: <Widget>[
         Expanded(
-          child: MessageList(
-            currentUser: currentUser,
-            messages: messages,
-            messageOptions: messageOptions,
-            messageListOptions: messageListOptions,
-            quickReplyOptions: quickReplyOptions,
-            scrollToBottomOptions: scrollToBottomOptions,
-            typingUsers: typingUsers,
+          child: AnimatedSwitcher(
+            duration: const Duration(milliseconds: 350),
+            switchInCurve: Curves.easeInOutCubic,
+            switchOutCurve: Curves.easeInOutCubic,
+            child: messages.isNotEmpty
+                ? MessageList(
+                    currentUser: currentUser,
+                    messages: messages,
+                    messageOptions: messageOptions,
+                    messageListOptions: messageListOptions,
+                    quickReplyOptions: quickReplyOptions,
+                    scrollToBottomOptions: scrollToBottomOptions,
+                    typingUsers: typingUsers,
+                  )
+                : emptyState!,
           ),
         ),
         if (!readOnly)
